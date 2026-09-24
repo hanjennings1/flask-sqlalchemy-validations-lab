@@ -65,7 +65,7 @@ class Post(db.Model):
     @validates('summary')
     def validate_summary(self, key, summary):
         if not summary or len(summary) > 250:
-            raise ValueError ("Post must have summary / Summary must be 250 characters or less.")
+            raise ValueError ("Summary must be 250 characters or less.")
         return summary
 
     # CATEGORY: "Fiction" or "Non-Fiction" ONLY
